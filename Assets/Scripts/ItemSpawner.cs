@@ -87,8 +87,7 @@ public class ItemSpawner : MonoBehaviour
             //}
             randomIndex = Random.Range(0, coins.Length);
 
-            // 2. 만약 뽑은 놈이 이미 활성화(사용 중) 상태라면, 비활성 상태인 놈을 찾을 때까지 계속 다시 뽑습니다.
-            // (단, 무한 루프 방지를 위해 최대 시도 횟수를 두는 것이 안전하지만, 코인 개수가 넉넉하다면 아래처럼 간단히 짤 수 있습니다.)
+
             int safetyNet = 0;
             while (coins[randomIndex].activeSelf && safetyNet < 100)
             {

@@ -7,9 +7,9 @@ public class PlatformSpawner : MonoBehaviour
     public Platform airObstaclePlatformPrefab;
   
 
-    private int basicCount = 4;
-    private int obstacleCount = 2;
-    private int airObstacleCount = 2;
+    private int basicCount = 10;
+    private int obstacleCount = 5;
+    private int airObstacleCount = 5;
 
     public int count;
 
@@ -78,6 +78,16 @@ public class PlatformSpawner : MonoBehaviour
             {
                 randomIndex = Random.Range(0, platforms.Length);
             }
+            int safetyNet = 0;
+            while (platforms[randomIndex].gameObject.activeSelf &&
+                   platforms[randomIndex].transform.position.x > Camera.main.transform.position.x - 15f &&
+                   safetyNet < 100)
+            {
+                randomIndex = Random.Range(0, platforms.Length);
+                safetyNet++;
+            }
+            if (safetyNet >= 100) return;
+
             platforms[randomIndex].transform.position = pos;
 
             platforms[randomIndex].gameObject.SetActive(false);

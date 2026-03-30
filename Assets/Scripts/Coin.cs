@@ -21,7 +21,7 @@ public class Coin : MonoBehaviour
         }
         if(other.CompareTag("Player"))
         {
-            //gameManager.AddScore(1);
+            gameManager.AddScore(1);
             gameObject.SetActive(false);
             energySystem?.AddEnergy(energySystem.coinRecharge);
         }

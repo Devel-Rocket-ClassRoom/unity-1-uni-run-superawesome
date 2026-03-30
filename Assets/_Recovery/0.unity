@@ -1095,8 +1095,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4446a78caaaa4084ba38c193f2572abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  scoreText: {fileID: 1786456603}
-  gameOverUi: {fileID: 757998518}
+  scoreText: {fileID: 0}
+  gameOverUi: {fileID: 0}
 --- !u!4 &1242432348
 Transform:
   m_ObjectHideFlags: 0
@@ -1867,7 +1867,7 @@ GameObject:
   - component: {fileID: 1683767752}
   m_Layer: 0
   m_Name: DeadZone
-  m_TagString: Instant Death
+  m_TagString: Dead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

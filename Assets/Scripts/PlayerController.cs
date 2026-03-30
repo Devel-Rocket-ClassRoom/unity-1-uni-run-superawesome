@@ -96,7 +96,10 @@ public class PlayerController : MonoBehaviour
         {
             energySystem.RemoveEnergy(energySystem.coinPenalty);
         }
-
+        else if(collision.CompareTag("Instant Death"))
+        {
+            energySystem.RemoveEnergy(energySystem.maxEnergy);
+        }
     }
 
     public void Die()

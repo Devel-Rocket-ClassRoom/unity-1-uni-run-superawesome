@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (IsGameOver && Input.GetButtonDown("Fire1"))
+        if (IsGameOver && Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public void OnPlayerDead()
     {
         IsGameOver = true;
-        //gameOverUi.SetActive(true);
+        gameOverUi.SetActive(true);
         //StopScrolling();
     }
 
